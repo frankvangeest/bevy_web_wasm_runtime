@@ -1,0 +1,11 @@
+[package]
+name = "bevy_web_wasm_runtime"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.15"
+
+[profile.release]
+opt-level = 'z'
+lto = true
