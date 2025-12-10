@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bevy Web WASM Runtime</title>
+    <!-- Required headers for SharedArrayBuffer support -->
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
     <style>
         body {
             margin: 0;
@@ -17,6 +20,15 @@
             height: 100%;
         }
     </style>
+    <script type="module">
+        const features = {
+            webgpu: 'gpu' in navigator,
+            sharedArrayBuffer: typeof SharedArrayBuffer !== 'undefined',
+            webAssembly: typeof WebAssembly !== 'undefined',
+            webWorkers: typeof Worker !== 'undefined'
+        };
+        console.log(features);
+    </script>
 </head>
 <body>
     <script type="module">
