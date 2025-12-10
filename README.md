@@ -26,7 +26,7 @@ cargo build --release --target wasm32-unknown-unknown
 
 2. Generate WASM bindings:
 ```bash
-wasm-bindgen --out-dir . --target web --no-typescript .\target\wasm32-unknown-unknown\release\bevy_web_wasm_runtime.wasm
+wasm-bindgen --out-dir ./web_server/public/lib --target web --no-typescript .\target\wasm32-unknown-unknown\release\bevy_web_wasm_runtime.wasm
 ```
 
 3. Serve the files with a local web server:
