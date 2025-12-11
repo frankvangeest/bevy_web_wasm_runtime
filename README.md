@@ -17,33 +17,6 @@ Install wasm-bindgen-cli:
 cargo install wasm-bindgen-cli
 ```
 
-## Building for WASM
+## Building
 
-1. Build the project:
-```bash
-cargo build --release --target wasm32-unknown-unknown
-```
-
-2. Generate WASM bindings:
-```bash
-wasm-bindgen --out-dir ./web_server/public/lib --target web --no-typescript .\target\wasm32-unknown-unknown\release\bevy_web_wasm_runtime.wasm
-```
-
-3. Serve the files with a local web server:
-```bash
-# Using Python
-python -m http.server
-
-# Or using a simple server like 'basic-http-server'
-cargo install basic-http-server
-basic-http-server .
-```
-
-4. Open your browser to `http://localhost:8000` (or the port shown)
-
-## Development
-
-Run locally (native):
-```bash
-cargo run
-```
+See app/README.md
